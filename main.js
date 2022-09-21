@@ -16,26 +16,37 @@ function playerSelection(){
 
     function playRound(computerSelection,playerSelection){
     if (computerSelection === 'rock'&& playerSelection === 'paper')
-        return ('You win! Paper beats rock')
+        return ('You win!')
         else if (computerSelection ===1 && playerSelection === 'scissor')
-        return('Better luck next time. Rock Beats Scissor.')
+        return('Better luck next time you lost')
         else if (computerSelection === 1 && playerSelection === 'rock')
         return ('It"s a draw try again.')
         if (computerSelection === 'paper' && playerSelection === 'paper')
         return ('It"s a draw try again.')
         else if (computerSelection === 'paper' && playerSelection === 'scissor')
-        return('You win! Scissor beats Paper.')
+        return('You win!')
         else if (computerSelection === 'paper' && playerSelection === 'rock')
-        return ('Sorry, you lose. Paper Beats Rock')
+        return ('Better luck next time you lost')
         else if ( computerSelection === 'scissor' && playerSelection === 'paper')
-        return('Sorry you lose. Paper loses to scissor.')
+        return('Better luck next time you lost')
         else if (computerSelection === 'scissor' && playerSelection === 'rock')
-        return('You win! Rock beats scissor')
+        return('You win!')
         else (computerSelection=== ' scissor' && playerSelection === 'scissor')
-        return ('No, winner. Its a draw.')
+        return ('It"s a draw try again.')
 }
 
+let score = 
+}
+function game(){
+    let answer = playRound();
+    for (let i = 0; i < 5; i++ ){
+        if  (i = 'You win')
+    }
 }
 
 
-
+// Game is 5 rounds
+// When a round is play
+// then you will need to track the score. 
+// at the end of 5 rounds the game is over. 
+// provide the score of the game 
