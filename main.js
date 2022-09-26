@@ -11,6 +11,7 @@ function getComputerChoice(){
     break;
     case 2: 'scissors';
  }
+}
 function playerSelection(){
     playerInput = prompt('Choose your weapon! Rock, Paper or Scissor')
     return playerInput.toLowerCase()
