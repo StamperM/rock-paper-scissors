@@ -4,18 +4,17 @@ let computerChoice = getComputerChoice()
 
 function getComputerChoice(){
    let computerChoiceInput = (Math.floor(Math.random() * choice.length));
-   switch(computerChoiceInput){
-    case 0: 'rock'
+   switch (computerChoiceInput){
+    case 0: 'rock';
     break;
-    case 1: 'paper'
+    case 1: 'paper';
     break;
-    case 2: 'scissors'
-
-   }
+    case 2: 'scissors';
+ }
 function playerSelection(){
     playerInput = prompt('Choose your weapon! Rock, Paper or Scissor')
     return playerInput.toLowerCase()
-
+}
 
     function playRound(computerSelection,playerSelection){
     if (computerSelection === 'rock' && playerSelection === 'paper')
@@ -45,4 +44,4 @@ function playerSelection(){
 // When a round is play
 // then you will need to track the score. 
 // at the end of 5 rounds the game is over. 
-// provide the score of the
+// provide the score of thjkljlkjkljlkj    
