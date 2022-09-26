@@ -14,12 +14,13 @@ function playerSelection(){
     playerInput = prompt('Choose your weapon! Rock, Paper or Scissor')
     return playerInput.toLowerCase()
 
+
     function playRound(computerSelection,playerSelection){
-    if (computerSelection === 'rock'&& playerSelection === 'paper')
+    if (computerSelection === 'rock' && playerSelection === 'paper')
         return ('You win!')
         else if (computerSelection ===1 && playerSelection === 'scissor')
         return('Better luck next time you lost')
-        else if (computerSelection === 1 && playerSelection === 'rock')
+        else if (computerSelection=== 1 && playerSelection === 'rock')
         return ('It"s a draw try again.')
         if (computerSelection === 'paper' && playerSelection === 'paper')
         return ('It"s a draw try again.')
@@ -27,26 +28,24 @@ function playerSelection(){
         return('You win!')
         else if (computerSelection === 'paper' && playerSelection === 'rock')
         return ('Better luck next time you lost')
-        else if ( computerSelection === 'scissor' && playerSelection === 'paper')
+        else if (computerSelection === 'scissor' && playerSelection === 'paper')
         return('Better luck next time you lost')
         else if (computerSelection === 'scissor' && playerSelection === 'rock')
         return('You win!')
-        else (computerSelection=== ' scissor' && playerSelection === 'scissor')
+        else (computerSelection === 'scissor' && playerSelection === 'scissor')
         return ('It"s a draw try again.')
 }
 
-let score = 
-}
-function game(){
-    let answer = playRound();
-    for (let i = 0; i < 5; i++ ){
-        if  (i = 'You win')
-    }
-}
 
 
 // Game is 5 rounds
 // When a round is play
 // then you will need to track the score. 
 // at the end of 5 rounds the game is over. 
-// provide the score of the game 
+// provide the score of the game
+
+
+
+
+
+
