@@ -1,6 +1,6 @@
 const choice = ['Rock', 'Paper','Scissor'];
-let playerChoice = playerSelection()
-let computerChoice = getComputerChoice()
+const computerSelection = getComputerChoice();
+const playerChoice = playerSelection();
 
 function getComputerChoice(){
    let computerChoiceInput = (Math.floor(Math.random() * choice.length));
@@ -17,30 +17,54 @@ function playerSelection(){
     return playerInput.toLowerCase()
 }
 
-    function playRound(computerSelection,playerSelection){
-    if (computerSelection === 'rock' && playerSelection === 'paper')
-        return ('You win!')
-        else if (computerSelection ===1 && playerSelection === 'scissor')
-        return('Better luck next time you lost')
-        else if (computerSelection=== 1 && playerSelection === 'rock')
-        return ('It"s a draw try again.')
-        if (computerSelection === 'paper' && playerSelection === 'paper')
-        return ('It"s a draw try again.')
-        else if (computerSelection === 'paper' && playerSelection === 'scissor')
-        return('You win!')
-        else if (computerSelection === 'paper' && playerSelection === 'rock')
-        return ('Better luck next time you lost')
-        else if (computerSelection === 'scissor' && playerSelection === 'paper')
-        return('Better luck next time you lost')
-        else if (computerSelection === 'scissor' && playerSelection === 'rock')
-        return('You win!')
-        else (computerSelection === 'scissor' && playerSelection === 'scissor')
-        return ('It"s a draw try again.')
+
+    function playRound(playerChoice,computerChoice){
+    if (playerChoice === computerChoice){
+        return 'Tie'
+    } else if (playerChoice === 'paper' && computerChoice === 'rock' || playerChoice === 'scissor' && computerChoice === 'paper' || playerChoice === 'rock' && computerChoice === 'scissor'){
+        return 'Player'
+    } else { 
+        return 'Computer'
+    }
+   }
+
+   function game(){
+    const playerChoice = playerSelection();
+    const computerChoice = getComputerChoice();
+   
+    for (let i = 0; i< 5; i++) {
+        return playRound()
+    
 }
+   }
+    
+//     (computerSelection === 'rock' && playerChoice === 'paper') || 
+//     (computerSelection === 'paper' && playerChoice === 'scissor')
+//         return ('You win!')
+//         else if (computerSelection ===1 && playerChoice === 'scissor')
+//         return('Better luck next time you lost')
+//         else if (computerSelection=== 1 && playerChoice === 'rock')
+//         return ('It is a draw try again.')
+//         if (computerSelection === 'paper' && playerChoice  === 'paper')
+//         return ('It is a draw try again.')
+//         else if 
+//         return('You win!')
+//         else if (computerSelection === 'paper' && playerChoice  === 'rock')
+//         return ('Better luck next time you lost')
+//         else if (computerSelection === 'scissor' && playerChoice === 'paper')
+//         return('Better luck next time you lost')
+//         else if (computerSelection === 'scissor' && playerChoice === 'rock')
+//         return('You win!')
+//         else (computerSelection === 'scissor' && playerChoice  === 'scissor')
+//         return ('It is a draw try again.')
+// }
 
 
+ 
 
-
+// When a player initiates the game
+// then function player selection is prompted
+// if playerSelection then initiate computerSelection
 // Game is 5 rounds
 // When a round is play
 // then you will need to track the score. 
