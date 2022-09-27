@@ -1,5 +1,5 @@
 const choice = ['Rock', 'Paper','Scissor'];
-const computerSelection = getComputerChoice();
+const computerChoice = getComputerChoice();
 const playerChoice = playerSelection();
 
 function getComputerChoice(){
@@ -27,13 +27,15 @@ function playerSelection(){
         return 'Computer'
     }
    }
-
+ function score(
+    
+ )
    function game(){
-    const playerChoice = playerSelection();
-    const computerChoice = getComputerChoice();
    
-    for (let i = 0; i< 5; i++) {
-        return playRound()
+    const roundOfPlay = ['Round 1', 'Round2', 'Round 3', 'Round 4', 'Round 5']
+   for (let i = 0; i < roundOfPlay.lenght; i++) {
+    playRound();
+        return 
     
 }
    }
