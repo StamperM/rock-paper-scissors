@@ -1,6 +1,9 @@
 const choice = ['Rock', 'Paper','Scissor'];
-const computerChoice = getComputerChoice();
-const playerChoice = playerSelection();
+// const computerChoice = getComputerChoice();
+// const playerChoice = playerSelection();
+let playerScore = 0;
+let computerScore = 0;
+
 
 function getComputerChoice(){
    let computerChoiceInput = (Math.floor(Math.random() * choice.length));
@@ -18,48 +21,44 @@ function playerSelection(){
 }
 
 
-    function playRound(playerChoice,computerChoice){
+    function playRound(){
+        // debugger;
+        let playerChoice = playerSelection();
+        let computerChoice = getComputerChoice();
     if (playerChoice === computerChoice){
         return 'Tie'
     } else if (playerChoice === 'paper' && computerChoice === 'rock' || playerChoice === 'scissor' && computerChoice === 'paper' || playerChoice === 'rock' && computerChoice === 'scissor'){
+        playerScore++;
         return 'Player'
     } else { 
+        computerScore++;
         return 'Computer'
     }
    }
- function score(
+
+    function endGame(){
+        
+        if(playerScore > computerScore){
+            return 'You Win!';
+        }
+        else if(playerScore < computerScore){
+            return 'You Lose! Try Again.';
+        }
+        else{
+            return 'You Tied! Better luck next time.'
+        }
+    }
     
- )
+
    function game(){
-   
-    const roundOfPlay = ['Round 1', 'Round2', 'Round 3', 'Round 4', 'Round 5']
-   for (let i = 0; i < roundOfPlay.lenght; i++) {
+     for (let i = 0; i < 5; i++) {
     playRound();
-        return 
-    
+       
+      }
 }
-   }
-    
-//     (computerSelection === 'rock' && playerChoice === 'paper') || 
-//     (computerSelection === 'paper' && playerChoice === 'scissor')
-//         return ('You win!')
-//         else if (computerSelection ===1 && playerChoice === 'scissor')
-//         return('Better luck next time you lost')
-//         else if (computerSelection=== 1 && playerChoice === 'rock')
-//         return ('It is a draw try again.')
-//         if (computerSelection === 'paper' && playerChoice  === 'paper')
-//         return ('It is a draw try again.')
-//         else if 
-//         return('You win!')
-//         else if (computerSelection === 'paper' && playerChoice  === 'rock')
-//         return ('Better luck next time you lost')
-//         else if (computerSelection === 'scissor' && playerChoice === 'paper')
-//         return('Better luck next time you lost')
-//         else if (computerSelection === 'scissor' && playerChoice === 'rock')
-//         return('You win!')
-//         else (computerSelection === 'scissor' && playerChoice  === 'scissor')
-//         return ('It is a draw try again.')
-// }
+
+ 
+
 
 
  
